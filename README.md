@@ -11,5 +11,3 @@
 |Semantic Search|sentence-transformers|
 |Similarity |cosine_similarity|
 |UI|streamlit|
-
-# dmmw
