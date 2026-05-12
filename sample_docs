@@ -1,0 +1,48 @@
+###Update that i could make 
+#=============================================================
+#hybird pdf extractor for text and image#
+
+import fitz  # PyMuPDF
+
+def extract_anything(file_path):
+    doc = fitz.open(file_path)
+    full_text = []
+
+    for page in doc:
+        # 1. Try to get digital text first
+        text = page.get_text().strip()
+        
+        # 2. If no text is found, it's likely a scan/image
+        if not text:
+            # This triggers OCR on the page
+            # Note: requires Tesseract installed on your OS
+            text = page.get_text("text", ocr=True)
+        
+        full_text.append(text)
+
+    doc.close()
+    return "\n".join(full_text)
+
+# Usage
+content = extract_anything("mixed_document.pdf")
+print(content)
+#=============================================================
+
+
+
+
+#=============================================================
+
+
+#=============================================================
+
+
+#=============================================================
+
+
+
+#=============================================================
+
+
+
+#=============================================================
