@@ -18,5 +18,5 @@ clean_docx = clean_text(docx_txt)
 
 #Test
 
-# print(clean_pdf)
+print(clean_pdf)
 # print(clean_docx)

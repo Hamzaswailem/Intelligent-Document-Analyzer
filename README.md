@@ -21,6 +21,28 @@ This handles punctuation attached to words more effectively than a standard.
 
  split().Stop Word Removal: Filtering out extremely common words that carry little semantic value.
 
+## NLP Techniques
+
+Since my text is already tokenized and cleaned we are going to use Sumy because it provides several "tried and true" algorithms that don't require a heavy GPU
+
+input ---> praser ---> Stemmer ---> Summarizer ---> Output
+
+
+Input: Your cleaned, tokenized text
+Parser: Sumy’s PlaintextParser converts text into a "Document" object
+Stemmer: Reduces words to their roots (so the algorithm knows "running" and "run" are the same)
+Summarizer: An algorithm (like LSA or LexRank) ranks the sentences
+Output: The top $N$ most important sentences
+
+
+
+### Algorithm used
+
+LexRank : Unsupervised graph-based (like Google's PageRank). It finds sentences that "link" to many others.
+
+
+
+
 
 # Structure
 
