@@ -20,4 +20,8 @@ Tokenization: The process of splitting strings into a list of words using nltk.w
 This handles punctuation attached to words more effectively than a standard.
 
  split().Stop Word Removal: Filtering out extremely common words that carry little semantic value.
- 
+
+
+# Structure
+
+ <img width="217" height="479" alt="image" src="https://github.com/user-attachments/assets/eee69080-ef7a-42c8-94b3-4b2482a4b7d2" />
