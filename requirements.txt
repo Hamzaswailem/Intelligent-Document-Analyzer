@@ -28,6 +28,9 @@ scipy>=1.13.0
 pandas>=2.2.0
 tqdm>=4.67.0
 
+# Test
+
+jiWER>=4.0.0
 
 
 

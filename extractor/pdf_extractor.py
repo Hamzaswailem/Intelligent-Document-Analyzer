@@ -11,7 +11,7 @@ def pdf_to_text(file_path):
         page = doc.load_page(page_num)  # Load the specific page
 
         # 3. Extract text from that page
-        page_text = page.get_text()
+        page_text = page.get_text(file_path, ocr=True, dpi=300)
         full_text += f"\n--- Page {page_num + 1} ---\n" 
         full_text += page_text
 
@@ -20,6 +20,7 @@ def pdf_to_text(file_path):
     
     return full_text
 
+docx_extracted_text = pdf_to_text("test2.pdf")
+
 # test
-my_text = pdf_to_text("The-Iran-War-and-The-Global-Terrorism-Threat.pdf")
-print(my_text)
+# print(pdf_to_text("test2.pdf"))
